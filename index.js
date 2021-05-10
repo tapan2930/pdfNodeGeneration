@@ -21,5 +21,9 @@ app.get('/',async  function (req, res) {
     res.download(__dirname + '/resumeTapan.pdf', 'resumeTapan.pdf');
 })
   
-app.listen(8080)
+const port = process.env.PORT || 8000;
+
+app.listen(port, ()=> {
+    console.log(`server running at ${port}`)
+})
 
